@@ -9,7 +9,7 @@ class Mesh
 public:
 
 	fmat v;
-	fcube f; // slice 0: v, 1: n, 2:t
+	icube f; // slice 0: vertex index, 1: normal index, 2:texture index
 	fmat n;
 	fmat t;
 

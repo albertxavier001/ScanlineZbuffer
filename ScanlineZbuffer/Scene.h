@@ -13,6 +13,7 @@ class Scene
 public:
 	Mesh mesh;
 	Camera cam;
+	fvec light;
 public:
 	Scene();
 	~Scene();
