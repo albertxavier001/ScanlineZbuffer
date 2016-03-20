@@ -125,6 +125,4 @@ void Scene::parseLine(const string &oneline){
 		default: break;
 		}
 	}
-	/// 
-
 }
