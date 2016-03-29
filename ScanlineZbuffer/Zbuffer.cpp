@@ -18,9 +18,12 @@ QImage Zbuffer::ScanlineZbuffer(
 	const float		&scale) 
 {
 	/// if rotate
-	if (angleX != 0.f) scene.cam.rotX(angleX);
-	if (angleY != 0.f) scene.cam.rotY(angleY);
-	if (scale != 1.f) scene.cam.scale(scale);
+	if (angleX != 0.f) 
+		scene.cam.rotX(angleX);
+	if (angleY != 0.f) 
+		scene.cam.rotY(angleY);
+	if (scale != 1.f) 
+		scene.cam.scale(scale);
 
 	/// create buffer ///xxx???
 	vector<float> buffer(scene.cam.w * scene.cam.h, 1.1f);
@@ -93,7 +96,8 @@ void Zbuffer::initScanLineNewEdgeTable(
 			continue;
 
 		float fm = (float)(vprjE.at(1) - vprjS.at(1));
-		e.dx = (float)(vprjE.at(0) - vprjS.at(0)) / fm;
+		e.dx = (float)(vprjE.at(0) - vprjS.at(0)) 
+			/ (float)((int)vprjE.at(1) - (int)vprjS.at(1));
 		e.dz = (float)(vprjE.at(2) - vprjS.at(2)) / fm;
 		e.dp = (vE - vS) / fm;
 		e.dn = (nS - nE) / fm;

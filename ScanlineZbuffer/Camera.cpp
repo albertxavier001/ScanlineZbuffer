@@ -35,11 +35,16 @@ Camera::~Camera()
 
 void Camera::rotX(const float &angleX) 
 {
-	fvec dir = eye - look;
+
+	eye.print("eye");
+	look.print("look");
+
+	fvec4 dir = eye - look;
+
 	yDir = normalise(up);
 	xDir = normalise(cross(dir, yDir));
 
-	fmat R = hp.getXRotationMatrix(yDir, angleX);
+	fmat::fixed<4, 4> R = hp.getXRotationMatrix(yDir, angleX);
 	eye = look + R * dir;
 
 	///xxx dump

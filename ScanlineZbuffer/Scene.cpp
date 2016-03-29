@@ -68,8 +68,11 @@ void Scene::parseLine(const string &oneline){
 	ss >> key;
 	
 	/// camera
-	if (key == "eye") 
+	if (key == "eye")
+	{
 		ss >> cam.eye.at(0) >> cam.eye.at(1) >> cam.eye.at(2);
+		cam.eye.print("eye");
+	}
 	
 	if (key == "look")
 		ss >> cam.look.at(0) >> cam.look.at(1) >> cam.look.at(2);
