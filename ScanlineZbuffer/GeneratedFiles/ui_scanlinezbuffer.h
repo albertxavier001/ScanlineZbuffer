@@ -17,7 +17,6 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
-#include <QtWidgets/QOpenGLWidget>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
@@ -30,8 +29,7 @@ class Ui_ScanlineZbufferClass
 public:
     QAction *actionOpen;
     QWidget *centralWidget;
-    ScanlineZbufferView *graphicsView;
-    QOpenGLWidget *openGLWidget;
+    ScanlineZbufferView *szView;
     QMenuBar *menuBar;
     QMenu *menu;
     QToolBar *mainToolBar;
@@ -46,12 +44,9 @@ public:
         actionOpen->setObjectName(QStringLiteral("actionOpen"));
         centralWidget = new QWidget(ScanlineZbufferClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        graphicsView = new ScanlineZbufferView(centralWidget);
-        graphicsView->setObjectName(QStringLiteral("graphicsView"));
-        graphicsView->setGeometry(QRect(20, 90, 431, 401));
-        openGLWidget = new QOpenGLWidget(centralWidget);
-        openGLWidget->setObjectName(QStringLiteral("openGLWidget"));
-        openGLWidget->setGeometry(QRect(490, 90, 461, 401));
+        szView = new ScanlineZbufferView(centralWidget);
+        szView->setObjectName(QStringLiteral("szView"));
+        szView->setGeometry(QRect(0, 0, 981, 631));
         ScanlineZbufferClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(ScanlineZbufferClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));

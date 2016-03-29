@@ -138,6 +138,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Edge.cpp" />
     <ClCompile Include="GeneratedFiles\Debug\moc_scanlinezbuffer.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
@@ -215,6 +216,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Edge.h" />
     <ClInclude Include="GeneratedFiles\ui_scanlinezbuffer.h" />
     <ClInclude Include="Helper.h" />
     <ClInclude Include="Mesh.h" />

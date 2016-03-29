@@ -14,23 +14,13 @@
    <string>ScanlineZbuffer</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="ScanlineZbufferView" name="graphicsView">
+   <widget class="ScanlineZbufferView" name="szView">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>90</y>
-      <width>431</width>
-      <height>401</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QOpenGLWidget" name="openGLWidget">
-    <property name="geometry">
-     <rect>
-      <x>490</x>
-      <y>90</y>
-      <width>461</width>
-      <height>401</height>
+      <x>0</x>
+      <y>0</y>
+      <width>981</width>
+      <height>631</height>
      </rect>
     </property>
    </widget>

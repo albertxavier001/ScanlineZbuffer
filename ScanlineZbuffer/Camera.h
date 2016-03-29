@@ -14,21 +14,24 @@ public:
 	void rotX(const float &angleX);
 	void rotY(const float &angleY);
 	void scale(float s);
+	void project(fvec4 &vin, fvec4 &vout);
 public:
 	Helper hp;
 	
-	fvec eye;
-	fvec look;
-	fvec up;
+	fvec4 eye;
+	fvec4 look;
+	fvec4 up;
 	
-	fvec xDir;
-	fvec yDir;
+	fvec4 xDir;
+	fvec4 yDir;
 	
-	ivec image;
+	ivec2 image;
 	float fov;
 	
-	fmat wcs2ccsMatrix;
-	fmat ccs2viewMatrix;
+	fmat::fixed<4,4> wcs2ccsMatrix;
+	fmat::fixed<4,4> ccs2viewMatrix;
 
+	int w;
+	int h;
 };
 
